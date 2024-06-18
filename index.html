@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domain Held By Proxy Domain Holding Services Ltd</title>
+</head>
+<style>
+    body{
+        display: flex;
+        flex-direction: column;
+        background-color: black;
+        height: 100vh;
+        width: 100vw;
+        margin: 0;
+        color: white;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        font-family: Arial, sans-serif;
+        font-size: large;
+    }
+</style>
+<body>
+    <!-- SITE DEVELOPED BY PROXY -->
+    <div>
+        <h1>This Domain Is Currently Owned And Held By Proxy Domain Holding Services Premium Ltd</h1>
+        <form id="contact">
+            <h1>Direct Inquiry To Proxy Domain Holding Services Premium Ltd Contact @sleepthegod On Discord</h1>
+            <h2>Contact ⬇️</h2>
+            <input type="text" id="discord" placeholder="Your Discord" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+    
+    <script>
+        document.getElementById('contact').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const webhook = 'https://discordapp.com/api/webhooks/1252674018436186192/VnA09iek8gnFdB7TrxOHDhn4SFHP3HjrC8oNKdlGQrlDq_TrU73F8bZcGCU0CBzTHkiu';
+            const payload = {
+                content: `Discord: ${document.getElementById('discord').value}\nMessage: ${document.getElementById('message').value}`
+            };
+            
+            fetch(webhook, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(payload),
+            })
+        });
+    </script>
+</body>
+</html>
